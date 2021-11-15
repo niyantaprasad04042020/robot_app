@@ -13,7 +13,7 @@ RSpec.describe "Robots", :type => :request do
       expect(response).to have_http_status(:success)
     end
 
-    it "JSON body response contains expected user attributes" do
+    it "JSON body response contains expected final location" do
       json_response = JSON.parse(response.body)
       expect(json_response).to have_key("location")
     end
